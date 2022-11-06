@@ -42,14 +42,77 @@ git clone https://github.com/4linux/4528
 cd 4528/
 vagrant up
 ```
+Utilização
+----------
 
+Todos os comandos devem ser utilizados dentro do diretório clonado.
 
+Para listar as máquinas:
+
+```bash
+vagrant status
+```
+
+Para entrar em uma máquina:
+
+```bash
+vagrant ssh <machine>
+```
+
+Para iniciar todas as máquinas:
+
+```bash
+vagrant up
+```
+
+Para salvar o estado de todas as máquinas:
+
+```bash
+vagrant suspend
+```
+
+Retomar as máquinas suspensas:
+
+```bash
+vagrant resume
+```
+
+Para desligar todas as máquinas:
+
+```bash
+vagrant halt
+```
+
+Dicas
+-----
+
+Opcionalmente, para a agilidade no processo de religar as VMs, você pode apenas efetuar o `vagrant suspend/resume` da VM após terminar sua utilização em determinado período, tendo em vista que o comando `vagrant up` realiza algumas verificações que podem demorar.
+
+> Em caso de erro na criação das máquinas sempre valide se sua conexão está boa, os logs de erros na tela e, se necessário, o arquivo **/var/log/vagrant_provision.log** dentro da máquina que apresentou a falha.
+
+Por fim, abaixo há alguns comandos básicos do vagrant para a gerencia das máquinas virtuais.
+
+Comandos                | Descrição
+:----------------------:| ---------------------------------------
+`vagrant init`          | Gerar o VagrantFile
+`vagrant box add <box>` | Baixar a  imagem do sistema
+`vagrant box status`    | Verificar o status dos boxes criados
+`vagrant up`            | Criar/Ligar as VMs baseado no VagrantFile
+`vagrant provision`     | Provisionar mudanças logicas nas VMs
+`vagrant status`        | Verificar se VM estão ativas ou não.
+`vagrant ssh <vm>`      | Acessar a VM
+`vagrant ssh <vm> -c <comando>` | Executa comando via ssh
+`vagrant reload <vm>`   | Reiniciar a VM carregando uma nova configuração aplicada no Vagrantfile
+`vagrant halt`          | Desligar as VMs
+
+> Para maiores informações acesse a [Documentação do Vagrant][8]
 
 
 
 [1]: https://git-scm.com/downloads
 [2]: https://www.virtualbox.org/wiki/Downloads
 [3]: https://www.vagrantup.com/downloads
+[4]: https://www.vagrantup.com/downloads
 [5]: https://cygwin.com/install.html
 [6]: https://www.vagrantup.com/
 [7]: ./Vagrantfile
