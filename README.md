@@ -20,7 +20,7 @@ Laboratório
 
 O Laboratório será criado utilizando o [Vagrant][6]. Ferramenta para criar e gerenciar ambientes virtualizados (baseado em Inúmeros providers) com foco em automação.
 
-Nesse laboratório, que está centralizado no arquivo [Vagrantfile][7], sera criada 1 maquina com a seguinte característica:
+Nesse laboratório, que está centralizado no arquivo [Vagrantfile][7], sera criada 4 máquinas com as seguintes características:
 
 Nome       | vCPUs | Memoria RAM | IP            | S.O.¹           
 ---------- |:-----:|:-----------:|:-------------:|:---------------:
